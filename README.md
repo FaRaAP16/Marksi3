@@ -1,1 +1,24 @@
-# Marksi3
+# <p align="center" > تنصيب سورس ماركسي
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > ⤈ ↫ كود التنصيب الاول مع المكاتب ↬ ⤈
+# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./DevProx.sh install`
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > ⤈ ↫ كود التنصيب السريع من دون مكاتب ↬ ⤈
+# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./DevProx.sh`
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > قم بنسخ احدى اكواد التنصيب
+# <p align="center" > والصقه في الترمنال واضغط انتر
+# <p align="center" > انتظر الى ان ينتهي التنصيب
+# <p align="center" > ⤈ ↫ بعدها املأ المتطلبات ↬ ⤈
+# <p align="center" > ~ ايدي المطور • توكن البوت ~
+# <p align="center" > ومبروك عليك تنصيب السورس
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > ⤈ ↫ كود الرن ↬ ⤈
+# <p align="center" > `./Marksi3/Run`
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > ⤈ ↫ كود حذف التنصيب ↬ ⤈
+# <p align="center" > `rm -rf Marksi3`
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
+# <p align="center" > ⤈ ↫ كود تغير ايدي المطور الاساسي وتوكن البوت ↬ ⤈
+# <p align="center" > `cd Marksi3;rm -rf config.lua;./Run`
+# <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
