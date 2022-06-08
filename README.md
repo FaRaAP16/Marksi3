@@ -1,10 +1,10 @@
 # <p align="center" > تنصيب سورس ماركسي
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 # <p align="center" > ⤈ ↫ كود التنصيب الاول مع المكاتب ↬ ⤈
-# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./DevProx.sh install`
+# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./Marksi.sh install`
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 # <p align="center" > ⤈ ↫ كود التنصيب السريع من دون مكاتب ↬ ⤈
-# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./DevProx.sh`
+# <p align="center" > `git clone https://github.com/FaRaAP16/Marksi3.git;cd Marksi3;chmod +x Marksi.sh;./Markai.sh`
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 # <p align="center" > قم بنسخ احدى اكواد التنصيب
 # <p align="center" > والصقه في الترمنال واضغط انتر
