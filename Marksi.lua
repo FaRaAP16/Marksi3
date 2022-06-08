@@ -2,7 +2,7 @@
 -- This Source Was Developed By (ABS) @Fa_RaAP.--
 --   This Is The Source Channel @Iraqiatheists1 .   --
 --                - Eng Fares -                 --
---        -- https://t.me/Dev_Prox --         --
+--        -- https://t.me/Iraqiatheists1 --         --
 ------------------------------------------------ 
 DevAbs  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
@@ -4195,7 +4195,7 @@ end
 if text == "السورس" or text == "سورس" then 
 local text =  [[
 Welcome To Source
-⌁︙DevProx TEAM
+⌁︙المجلة
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙[قناة المجلة](https://t.me/Iraqiatheists1)
 
@@ -8830,7 +8830,7 @@ if Audios.Info == true then
 local Text ='⌁︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌁ DevProx TeAM .',url="t.me/Dev_Prox"}},
+{{text = '⌁ المجلة .',url="t.me/Iraqiatheists1"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id='..msg.chat_id_..'&voice='..URL.escape(Audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9111,7 +9111,7 @@ local TkeedList = DevAbs:scard(DevProx.."Abs:Abs:Tkeed:"..ChatId) or 0
 local AdminsList = DevAbs:scard(DevProx.."Abs:Admins:"..ChatId) or 0
 local VipList = DevAbs:scard(DevProx.."Abs:VipMem:"..ChatId) or 0
 local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..ChatId))
-if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/Dev_Prox' end
+if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/Iraqiatheists1' end
 tdcli_function({ID ="GetChat",chat_id_=ChatId},function(arg,dp)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = ChatId:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 if dp.id_ then
