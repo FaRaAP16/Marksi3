@@ -137,7 +137,7 @@ DevId = Config.DevId
 SudoIds = {Config.SudoIds,223753375}
 DevProx = Config.DevProx
 TokenBot = Config.TokenBot
-NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس')
+NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'ماركسي')
 --     Source DevProx     --
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"..'\27[m'
 FilesNumber = 0
@@ -1434,8 +1434,8 @@ end
 DevAbs:del(DevProx.."Del:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_)
 return false
 end
-if text and text:match('^'..(DevAbs:get(DevProx..'Abs:NameBot') or "بروكس")..' ') then
-data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAbs:get(DevProx..'Abs:NameBot') or "بروكس")..' ','')
+if text and text:match('^'..(DevAbs:get(DevProx..'Abs:NameBot') or "ماركسي")..' ') then
+data.message_.content_.text_ = data.message_.content_.text_:gsub('^'..(DevAbs:get(DevProx..'Abs:NameBot') or "ماركسي")..' ','')
 end
 if data.message_.content_.text_ then
 local NewCmmd = DevAbs:get(DevProx.."Set:Cmd:Group:New1"..msg.chat_id_..":"..data.message_.content_.text_)
@@ -1717,7 +1717,7 @@ end
 if ChatType == 'pv' then 
 if text == '/start' or text == 'رجوع ،🔙‘' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌁︙مرحبا عزيزي المطور \n⌁︙انت المطور الاساسي هنا \n⌁︙اليك ازرار سورس بروكس \n⌁︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌁︙مرحبا عزيزي المطور \n⌁︙انت المطور الاساسي هنا \n⌁︙اليك ازرار سورس ماركسي \n⌁︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'وضع اسم البوت','↫ تحديث ⌁','وضع كليشه المطور'},
 {'↫ المطورين ⌁','↫ الاحصائيات ⌁'},
@@ -1745,7 +1745,7 @@ return false
 end end
 if text == '~ تعيين كلايش الاوامر ~' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '⌁︙اهلا بك مجددا عزيزي المطور \n⌁︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس بروكس فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '⌁︙اهلا بك مجددا عزيزي المطور \n⌁︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس ماركسي فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'حذف كليشة الايدي','تعيين كليشة الايدي'},
 {'تعيين امر الاوامر'},
@@ -3125,7 +3125,7 @@ if SecondSudo(msg) then
 if text == 'جلب نسخه الكروبات' or text == 'جلب نسخه احتياطيه' or text == 'جلب النسخه الاحتياطيه' then
 local Groups = DevAbs:smembers(DevProx..'Abs:Groups') 
 local Users = DevAbs:smembers(DevProx.."Abs:Users")
-local BotName = (DevAbs:get(DevProx.."Abs:NameBot") or 'بروكس')
+local BotName = (DevAbs:get(DevProx.."Abs:NameBot") or 'ماركسي')
 local GetJson = '{"BotId": '..DevProx..',"BotName": "'..BotName..'",'
 if #Users ~= 0 then
 GetJson = GetJson..'"UsersList":['
@@ -3329,19 +3329,19 @@ end
 --     Source DevProx     --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == 'بوت' or text == 'بوتت' then 
-NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس')
+NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'ماركسي')
 local DevProxTEAM = {"لتكول بوت اسمي "..NameBot.." 😒🔪","اسمي القميل "..NameBot.." 😚♥️","عندي اسم تره 😒💔","صيحولي "..NameBot.." كافي بوت 😒🔪","انت البوت لك 😒💔"} 
 Dev_Abs(msg.chat_id_, msg.id_, 1, DevProxTEAM[math.random(#DevProxTEAM)] , 1, 'html') 
 return false
 end
 if text == 'اسم البوت' or text == 'البوت شنو اسمه' or text == 'شسمه البوت' or text == 'البوت شسمه' then
-NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس') 
+NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'ماركسي') 
 local DevProxTEAM = {"اسمي القميل "..NameBot.." 😚♥️","هلاا يروحيي وياكك "..NameBot.." 😻♥️"} 
 Dev_Abs(msg.chat_id_, msg.id_, 1, DevProxTEAM[math.random(#DevProxTEAM)] , 1, 'html') 
 return false
 end
-if text and text == (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس') then 
-NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'بروكس')
+if text and text == (DevAbs:get(DevProx..'Abs:NameBot') or 'ماركسي') then 
+NameBot = (DevAbs:get(DevProx..'Abs:NameBot') or 'ماركسي')
 local DevProxTEAM = {'😸♥️ هلا كلبي وياك '..NameBot..' تفضل','ترةه مصختهاا احجيي شرايد 😕😒💔','اطلقق واحدد يصيح '..NameBot..' 😻♥️','خبصتت امنةة شتريدد عااد 🤧😒💔'} 
 Dev_Abs(msg.chat_id_, msg.id_, 1, DevProxTEAM[math.random(#DevProxTEAM)] , 1, 'html') 
 return false 
@@ -9363,7 +9363,7 @@ if text == 'جلب نسخه السورس' then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙للمطور الاساسي فقط ', 1, 'md')
 else
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './Marksi.lua', '⌁︙نسخة ملف سورس بروكس',dl_cb, nil)
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './Marksi.lua', '⌁︙نسخة ملف سورس ماركسي',dl_cb, nil)
 end end
 --     Source DevProx     --
 if text == 'روابط الكروبات' or text == 'روابط المجموعات' then
@@ -10363,7 +10363,7 @@ end
 --     Source DevProx     --
 if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس بروكس', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس ماركسي', 1, 'md') 
 os.execute('rm -rf Marksi.lua') 
 os.execute('wget https://raw.githubusercontent.com/FaRaAP16/Marksi3/master/Marksi.lua') 
 dofile('Marksi.lua') 
@@ -10393,12 +10393,12 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/DevProxTEAM/DevProxFiles/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/FaRaAP16/MarksiFiles/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⌁︙قائمة ملفات متجر سورس بروكس\n⌁︙الملفات المتوفره حاليا ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+local TextS = "\n⌁︙قائمة ملفات متجر سورس ماركسي\n⌁︙الملفات المتوفره حاليا ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 local TextE = "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙علامة ↫ (✔) تعني الملف مفعل\n⌁︙علامة ↫ (✖️) تعني الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -10425,7 +10425,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/DevProxTEAM/DevProxFiles/main/DevProxFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/FaRaAP16/MarksiFiles/main/MarksiFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -10437,7 +10437,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/DevProxTEAM/DevProxFiles/main/DevProxFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/FaRaAP16/MarksiFiles/main/MarksiFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
